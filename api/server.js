@@ -12,7 +12,7 @@ server.get('/api/users', (req, res) => {
         .then(users => {
             res.json(users)
         })
-        .catch(err => {
+        .catch(err => {//eslint-disable-line
             res.status(500).json({message: "The users information could not be retrieved"})
         })
 })
@@ -27,7 +27,7 @@ server.get('/api/users/:id', (req, res) => {
             }
             res.json(user)
         })
-        .catch(err => {
+        .catch(err => {//eslint-disable-line
             res.status(500).json({
                 message: "The user information could not be retrieved"
             })
@@ -47,7 +47,7 @@ server.post('/api/users', (req, res) => {
                 res.status(201).json(newUser);
             }
         })
-        .catch(err =>{
+        .catch(err =>{//eslint-disable-line
             res.status(500).json({
                 message: "There was an error while saving the user to the database"
             })
@@ -67,7 +67,7 @@ server.delete('/api/users/:id', (req, res) =>{
                 res.json(removed)
             }
         })
-        .catch(err => {
+        .catch(err => {//eslint-disable-line
             res.status(500).json({
                 message: "The user could not be removed"
             })
@@ -90,7 +90,7 @@ server.put('/api/users/:id', (req, res) => {
             }       
             
         })
-        .catch(err => {
+        .catch(err => {//eslint-disable-line
             res.status(500).json({
                 message: "The user information could not be modified"
             })
