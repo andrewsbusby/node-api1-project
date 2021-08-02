@@ -45,6 +45,7 @@ server.post('/api/users', (req, res) => {
                 })
             } else {
                 res.status(201).json(newUser);
+                console.log(newUser)
             }
         })
         .catch(err =>{//eslint-disable-line
