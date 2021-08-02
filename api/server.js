@@ -86,9 +86,7 @@ server.put('/api/users/:id', (req, res) => {
                     message: "The user with the specified ID does not exist" 
                 })
             } else {
-                res.status(400).json({
-                    message: "Please provide name and bio for the user" 
-                })
+                res.json(updated)
             }       
             
         })
